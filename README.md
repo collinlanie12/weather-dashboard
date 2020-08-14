@@ -12,7 +12,7 @@
 - [ ] Implementation of openweather api
 - [ ] Create a way to display weather conditions for city that is searched for
 - [ ] Display the searched city name, current date, and icons representing weather conditions, the temperature, the humidity, the wind speed, and the uv index
-- [ ] color code for conditons of: favorable, moderate, or severe
+- [ ] Color code for conditons of: favorable, moderate, or severe
 - [ ] Display 5 day forecast for future dates. 5 day forecast shows icon of weather conditions, the temperature, the humidity
 - [ ] Create a way to store cities searched in search history
 - [ ] Create way to display last searched city forecast when page is reopened.
