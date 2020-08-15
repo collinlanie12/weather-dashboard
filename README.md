@@ -7,12 +7,12 @@
 > <ins>SO THAT</ins> I can plan a trip accordingly
 
 ## Task To Be Completed:
-- [ ] Create weather dashboard with form inputs
-- [ ] Create a way to search for a city
-- [ ] Implementation of openweather api
-- [ ] Create a way to display weather conditions for city that is searched for
-- [ ] Display the searched city name, current date, and icons representing weather conditions, the temperature, the humidity, the wind speed, and the uv index
-- [ ] Color code for conditons of: favorable, moderate, or severe
+- [x] Create weather dashboard with form inputs
+- [x] Create a way to search for a city
+- [x] Implementation of openweather api
+- [x] Create a way to display weather conditions for city that is searched for
+- [x] Display the searched city name, current date, and icons representing weather conditions, the temperature, the humidity, the wind speed, and the uv index
+- [x] Color code for conditons of: favorable, moderate, or severe
 - [ ] Display 5 day forecast for future dates. 5 day forecast shows icon of weather conditions, the temperature, the humidity
 - [ ] Create a way to store cities searched in search history
 - [ ] Create way to display last searched city forecast when page is reopened.
