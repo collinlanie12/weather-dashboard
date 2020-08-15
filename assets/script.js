@@ -17,12 +17,12 @@ $("#searchbtn").on("click", function () {
             var mainCardInside = $("<div>").attr("class", "row ml-4");
             mainCard.append(mainCardInside);
 
-            var city = $("<h3>" + citySearch + "<br>" + moment().format("LL") + "<h3>");
+            var city = $("<h3>" + citySearch + "<br>" + moment().format("LL") + "</h3>");
             city.attr("class", "col-md-12 mt-4");
             mainCardInside.append(city);
 
-            var icon = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
-            var img = $("<img>").attr("class", "col-md-4").attr("src", icon);
+            var imgIcon = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
+            var img = $("<img>").attr("class", "col-md-4").attr("src", imgIcon);
             mainCardInside.append(img);
 
             var statsDiv = $("<div>").attr("class", "col-md-8")
@@ -81,7 +81,32 @@ $("#searchbtn").on("click", function () {
         method: "GET"
     })
         .then(function (response3) {
-            console.log(response3);
+            var divForCards = $("<div>").attr("class", "row five-days mt-4");
+            $("#forecasts").append(divForCards);
+
+            var dayTag = $("<h3>5-Day Forecast:</h3>");
+            dayTag.attr("class", "col-md-12");
+            divForCards.append(dayTag);
+
+            for (var i = 0; i < response3.list.length; i++) {
+                if (response3.list[i].dt_txt.indexOf("09:00:00") !== -1) {
+                    console.log(response3.list[i]);
+                    var newCards = $("<div>").attr("class", "col-md-2 ml-3 mt-3 card bg-primary text-white")
+                    var cardBody2 = $("<div>").attr("class", "card-body");
+                    var imgIcon = "http://openweathermap.org/img/wn/" + response3.list[i].weather[0].icon + ".png";
+                    var img = $("<img>").attr("class", "col-md-4").attr("src", imgIcon);
+
+                    cardBody2.append($("<p>" + moment.unix(response3.list[i].dt).format("LL") + "</p>").css({ 'font-size': '15px' }));
+                    cardBody2.append(img);
+                    console.log(img.attr("src"));
+                    cardBody2.append($("<p>").attr("class", "card-text").text("Temp: " + response3.list[i].main.temp + "\u00B0 F"));
+                    cardBody2.append($("<p>").attr("class", "card-text").text("Humidity: " + response3.list[i].main.humidity + "%").css({ 'font-size': '15px' }));
+                    newCards.append(cardBody2);
+                    divForCards.append(newCards);
+                }
+            }
+
+
         })
 
 });
