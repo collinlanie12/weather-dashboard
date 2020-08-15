@@ -1,6 +1,25 @@
+var searches = [];
+var citySearch = $("#citySearchInput").val();
+
+$(".cityBtn").on("click", function () {
+    citySearch = $(".cityBtn").text();
+    console.log(citySearch);
+
+    $("#searchBtn").click();
+
+});
+
 $("#searchbtn").on("click", function () {
     clear();
-    var citySearch = $("#citySearchInput").val();
+    citySearch = $("#citySearchInput").val();
+    $("#pastSearch").empty();
+    searches.push(citySearch);
+    for (var i = 0; i < searches.length; i++) {
+        var newBtns = $("<button>").attr("class", "btn btn-secondary cityBtn btn-lg btn-block");
+        newBtns.text(searches[i]);
+        $("#pastSearch").prepend(newBtns);
+
+    }
     var apiKey = "5fc8342540b36c6541d1d1659b328759";
     var queryURLCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearch + "&units=imperial&appid=" + apiKey;
     var queryURLForecast = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearch + "&units=imperial&appid=" + apiKey;
@@ -90,7 +109,6 @@ $("#searchbtn").on("click", function () {
 
             for (var i = 0; i < response3.list.length; i++) {
                 if (response3.list[i].dt_txt.indexOf("09:00:00") !== -1) {
-                    console.log(response3.list[i]);
                     var newCards = $("<div>").attr("class", "col-md-2 ml-3 mt-3 card bg-primary text-white")
                     var cardBody2 = $("<div>").attr("class", "card-body");
                     var imgIcon = "http://openweathermap.org/img/w/" + response3.list[i].weather[0].icon + ".png";
@@ -105,9 +123,7 @@ $("#searchbtn").on("click", function () {
                     divForCards.append(newCards);
                 }
             }
-
-
-        })
+        });
 
 });
 
