@@ -13,12 +13,12 @@
 - [x] Create a way to display weather conditions for city that is searched for
 - [x] Display the searched city name, current date, and icons representing weather conditions, the temperature, the humidity, the wind speed, and the uv index
 - [x] Color code for conditons of: favorable, moderate, or severe
-- [ ] Display 5 day forecast for future dates. 5 day forecast shows icon of weather conditions, the temperature, the humidity
-- [ ] Create a way to store cities searched in search history
+- [x] Display 5 day forecast for future dates. 5 day forecast shows icon of weather conditions, the temperature, the humidity
+- [x] Create a way to store cities searched in search history
 - [ ] Create way to display last searched city forecast when page is reopened.
 
 ## Link to Website:
 [My Weather Dashboard](https://collinlanie12.github.io/weather-dashboard/)
 
 ## Demo:
-![Alt text for image](https://github.com/[githubusername]/[name-of-repo]/blob/master/[folder-name-of-images]/[name-of-pic (ex. something.png)])
+![Weather Dashboard Demo](https://github.com/clanie12/weather-dashboard/blob/master/img/Weather-Dashboard.gif)

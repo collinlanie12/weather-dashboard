@@ -1,5 +1,12 @@
 var searches = [];
+
 var citySearch = $("#citySearchInput").val();
+
+$(document).ready(function () {
+    $(".cityBtn").text(JSON.parse(localStorage.getItem("searches")));
+
+});
+
 
 function displayButtonInfo() {
     clear();
@@ -113,9 +120,12 @@ function displayButtonInfo() {
 
 $("#searchbtn").on("click", function () {
     clear();
+
     citySearch = $("#citySearchInput").val();
+
     $("#pastSearch").empty();
     searches.push(citySearch);
+    localStorage.setItem("lastSearch", JSON.stringify(searches));
     for (var i = 0; i < searches.length; i++) {
         var newBtns = $("<button>").attr("class", "btn btn-secondary cityBtn btn-lg btn-block");
         newBtns.attr("data-name", searches[i]);
