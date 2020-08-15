@@ -21,4 +21,4 @@
 [My Weather Dashboard](https://collinlanie12.github.io/weather-dashboard/)
 
 ## Demo:
-![Weather Dashboard Demo](https://github.com/clanie12/weather-dashboard/blob/master/img/Weather-Dashboard.gif)
+![Weather Dashboard Demo](https://github.com/collinlanie12/weather-dashboard/blob/master/img/Weather-Dashboard.gif)
