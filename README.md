@@ -15,7 +15,7 @@
 - [x] Color code for conditons of: favorable, moderate, or severe
 - [x] Display 5 day forecast for future dates. 5 day forecast shows icon of weather conditions, the temperature, the humidity
 - [x] Create a way to store cities searched in search history
-- [ ] Create way to display last searched city forecast when page is reopened.
+- [x] Create way to display last searched city forecast when page is reopened.
 
 ## Link to Website:
 [My Weather Dashboard](https://collinlanie12.github.io/weather-dashboard/)
